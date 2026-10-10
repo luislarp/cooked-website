@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>COOKED ($COOKED) — Too cooked to quit.</title>
+<meta name="description" content="COOKED ($COOKED): a meme-coin community for traders who are too cooked to quit. No thoughts. Just charts.">
+<meta property="og:title" content="COOKED ($COOKED) — Too cooked to quit.">
+<meta property="og:description" content="No thoughts. Just charts. Welcome to the kitchen.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#191919">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Ctext y='.9em' font-size='9'%3E🔥%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+:root{--o:#FF7138;--c:#191919;--cr:#F5E8D5;--r:#FF3838;--g:#65D98A;--k:#0a0a0a;--h:"Bowlby One",Impact,"Arial Black",sans-serif;--b:"Space Grotesk",system-ui,sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));background:var(--c)}
+body{margin:0;background:var(--c);color:var(--cr);font:500 1.05rem/1.55 var(--b);overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.07;z-index:99;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--g);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--h);font-weight:400;text-transform:uppercase;line-height:.95;margin:0;text-shadow:4px 4px 0 #000}
+h2{font-size:clamp(2.2rem,6vw,4.4rem)}
+.o{color:var(--o)}.rd{color:var(--r)}.gr{color:var(--g)}
+section{padding:96px 0;position:relative}
+.btn{display:inline-block;font:400 1.05rem var(--h);text-transform:uppercase;text-decoration:none;color:var(--c);background:var(--o);border:3px solid #000;border-radius:10px;padding:14px 22px;box-shadow:5px 5px 0 #000;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 #000}.btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 #000}
+.btn.alt{background:var(--cr)}.btn.sm{padding:9px 14px;font-size:.85rem;box-shadow:3px 3px 0 #000}
+.mas{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 18px 0 rgba(0,0,0,.35))}
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(25,25,25,.94);border-bottom:3px solid #000}
+nav .wrap{display:flex;align-items:center;gap:20px;height:68px}
+.logo{font:400 1.7rem var(--h);color:var(--o);text-decoration:none;text-shadow:3px 3px 0 #000;margin-right:auto}
+.links{display:flex;align-items:center;gap:22px}
+.links a:not(.btn){text-decoration:none;font-weight:700}.links a:not(.btn):hover{color:var(--o)}
+.xi{width:22px;height:22px;fill:currentColor}
+.burger{display:none;background:none;border:3px solid var(--cr);border-radius:8px;color:var(--cr);width:46px;height:42px;font-size:1.3rem;cursor:pointer}
+@media(max-width:820px){.burger{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:14px;padding:20px;background:var(--c);border-bottom:3px solid #000}.links.open{display:flex}}
+/* hero */
+.hero{padding:56px 0 80px;min-height:calc(100svh - 68px);display:flex;align-items:center;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;position:relative}
+.hero h1{font-size:clamp(3.2rem,10.5vw,8.6rem)}
+.hero p.sub{font-size:1.2rem;max-width:34ch;margin:22px 0 10px}
+.hero .tag{font:400 1rem var(--h);color:var(--o);text-transform:uppercase;margin:0 0 28px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.heroart{position:relative}
+.heroart .mas{animation:bob 4s ease-in-out infinite}
+.blob{position:absolute;inset:6% -8% 0;background:radial-gradient(circle,rgba(255,113,56,.5),transparent 65%);z-index:-1}
+.chartbg{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.55}
+.chartbg path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 6s linear infinite}
+.cd{position:absolute;width:16px;background:var(--r);border:3px solid #000;animation:fl 5s ease-in-out infinite}
+.sticker{position:absolute;font:400 .8rem var(--h);background:var(--cr);color:var(--c);border:3px solid #000;padding:5px 9px;border-radius:6px;text-transform:uppercase;box-shadow:3px 3px 0 #000}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.heroart{max-width:380px;margin:0 auto}}
+/* lore */
+.lore .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.lore p{max-width:48ch}
+.stages{display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:14px;margin-top:28px;align-items:end}
+.stage{border:3px solid #000;border-radius:12px;padding:16px;background:var(--cr);color:var(--c);box-shadow:5px 5px 0 #000;font:400 1.1rem/1.1 var(--h);text-transform:uppercase}
+.stage small{display:block;font:700 .75rem var(--b);opacity:.7;margin-bottom:6px}
+.stage:nth-child(2){background:var(--o);transform:rotate(-2deg)}
+.stage.fin{background:var(--r);color:var(--cr);font-size:1.9rem;padding:24px 16px;transform:rotate(2.5deg);animation:shake 1.4s infinite;text-shadow:3px 3px 0 #000}
+@media(max-width:820px){.lore .wrap{grid-template-columns:1fr}.stages{grid-template-columns:1fr}}
+/* memes */
+.memes h2{margin-bottom:10px}.memes .lead{max-width:50ch;opacity:.8;margin:0 0 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:26px}
+.card{--rot:0deg;border:4px solid #000;border-radius:14px;padding:18px;box-shadow:7px 7px 0 #000;transform:rotate(var(--rot));transition:transform .2s;display:flex;flex-direction:column;gap:12px}
+.card:hover{transform:rotate(0) scale(1.03)}
+.card:nth-child(1){--rot:-1.6deg}.card:nth-child(2){--rot:1.2deg}.card:nth-child(3){--rot:-.8deg}.card:nth-child(4){--rot:1.8deg}.card:nth-child(5){--rot:-1.2deg}.card:nth-child(6){--rot:1deg}
+.card.cr{background:var(--cr);color:var(--c)}.card.or{background:var(--o);color:var(--c)}.card.ch{background:#262626;color:var(--cr)}
+.card .art{width:62%;margin:0 auto}
+.card .k{font:400 .8rem var(--h);text-transform:uppercase;opacity:.75}
+.card blockquote{margin:0;font-weight:700;font-size:1.12rem;line-height:1.35;white-space:pre-line}
+.card .btn{align-self:flex-start;background:var(--c);color:var(--cr)}.card.ch .btn{background:var(--cr);color:var(--c)}
+/* bullish */
+.back{background:var(--o);color:var(--c);border-block:4px solid #000;overflow:hidden}
+.back h2{text-shadow:4px 4px 0 var(--cr)}
+.back .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.back .gchart{background:var(--c);border:4px solid #000;border-radius:14px;padding:12px;box-shadow:7px 7px 0 #000;margin-top:26px;max-width:460px}
+.back .dis{font-size:.85rem;opacity:.85;margin-top:18px;max-width:46ch}
+.back .lines p{font:400 1.2rem/1.2 var(--h);margin:20px 0 0;text-transform:uppercase}
+@media(max-width:820px){.back .wrap{grid-template-columns:1fr}}
+/* poll */
+.poll{background:var(--cr);color:var(--c);border:4px solid #000;border-radius:16px;padding:26px;box-shadow:8px 8px 0 #000;max-width:640px;margin-top:34px}
+.poll h3{font-size:1.4rem;text-shadow:none;margin-bottom:16px}
+.opt{display:block;width:100%;position:relative;overflow:hidden;text-align:left;font:700 1rem var(--b);color:var(--c);background:#fff7ea;border:3px solid #000;border-radius:10px;padding:12px 14px;margin-bottom:10px;cursor:pointer}
+.opt .bar{position:absolute;inset:0 auto 0 0;width:0;background:var(--o);opacity:.55;transition:width .5s}
+.opt span{position:relative;display:flex;justify-content:space-between;gap:10px}
+.opt[aria-pressed=true]{border-color:var(--r);box-shadow:inset 0 0 0 2px var(--r)}
+.poll small{opacity:.75}
+.kit{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}
+.kit .mas{width:min(300px,40vw)}
+@media(max-width:820px){.kit{grid-template-columns:1fr}.kit .mas{width:200px}}
+/* coin */
+.coin dl{display:grid;grid-template-columns:max-content 1fr;gap:0;border:4px solid #000;border-radius:14px;overflow:hidden;box-shadow:7px 7px 0 #000;margin:34px 0 20px;background:#262626}
+.coin dt,.coin dd{margin:0;padding:14px 18px;border-bottom:2px solid #000}
+.coin dt{font:400 .85rem var(--h);text-transform:uppercase;color:var(--o)}
+.coin dd{word-break:break-all}.coin dl>:nth-last-child(-n+2){border-bottom:0}
+.ph{border:2px dashed var(--r);color:var(--r);border-radius:6px;padding:4px 8px;font:700 .9rem var(--b)}
+.coin .row{display:flex;gap:14px;flex-wrap:wrap}
+.disc{font-size:.85rem;opacity:.75;max-width:70ch;margin-top:26px}
+/* footer */
+footer{padding:80px 0 48px;text-align:center;border-top:4px solid #000;background:#111}
+footer h2{font-size:clamp(2.4rem,8vw,6rem);color:var(--o)}
+footer p{margin:14px 0 24px}
+footer .flinks{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
+footer .mas{width:130px;margin:0 auto 20px}
+/* toast */
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,40px);background:var(--cr);color:var(--c);font:700 .95rem var(--b);border:3px solid #000;border-radius:10px;padding:10px 16px;box-shadow:4px 4px 0 #000;opacity:0;pointer-events:none;transition:.25s;z-index:100;max-width:90vw;text-align:center}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@keyframes bob{50%{transform:translateY(-12px) rotate(1deg)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fl{50%{transform:translateY(-26px)}}
+@keyframes shake{0%,100%{transform:rotate(2.5deg)}25%{transform:rotate(1deg) translateX(-2px)}75%{transform:rotate(4deg) translateX(2px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.chartbg path{stroke-dashoffset:0}}
+[hidden]{display:none!important}
+.ico{display:inline-grid;place-items:center;width:44px;height:44px;border:3px solid #000;border-radius:10px;background:var(--cr);color:var(--c);box-shadow:3px 3px 0 #000;transition:transform .15s}
+.ico:hover{transform:translate(-2px,-2px)}.ico.big{width:52px;height:52px;box-shadow:4px 4px 0 #000}.ico .xi{width:22px;height:22px}
+nav .ico{width:38px;height:38px;box-shadow:2px 2px 0 #000}
+.cta{align-items:center}
+.flink{display:inline-flex;align-items:center;gap:8px}.flink .xi{width:18px;height:18px}
+.launch{overflow:hidden;background:radial-gradient(circle at 80% 60%,rgba(255,113,56,.28),transparent 60%),#141414;border-block:4px solid #000}
+.launch .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.launch .chartbg{opacity:.35}
+.pill{position:static;display:inline-block;margin-bottom:18px;transform:rotate(-3deg);background:var(--o)}
+.launch h2.big{font-size:clamp(2.8rem,9vw,7.2rem);margin-bottom:18px}
+.launch h2.big .o{display:inline-block;text-shadow:5px 5px 0 #000;animation:pulse 2.4s ease-in-out infinite}
+.lsub{font-size:1.2rem;max-width:40ch;margin:0 0 24px}
+.count{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.count div{min-width:78px;text-align:center;background:var(--cr);color:var(--c);border:3px solid #000;border-radius:10px;padding:10px 8px;box-shadow:4px 4px 0 #000}
+.count b{display:block;font:400 2rem/1 var(--h)}.count small{font:700 .7rem var(--b);text-transform:uppercase;opacity:.7}
+.soon{display:inline-block;font:400 1rem var(--h);color:var(--cr);background:var(--r);border:3px solid #000;border-radius:8px;padding:8px 14px;margin:0 0 26px;transform:rotate(-1.5deg);box-shadow:4px 4px 0 #000;text-transform:uppercase}
+.lart{position:relative}.lart .mas{position:relative;z-index:1;animation:bob 4s ease-in-out infinite}
+.fire{position:absolute;left:4%;right:4%;bottom:-2%;height:90px;display:flex;justify-content:space-around;align-items:flex-end;z-index:0}
+.fire i{width:46px;height:70px;background:var(--o);border:3px solid #000;border-radius:50% 50% 45% 45%/70% 70% 30% 30%;transform-origin:bottom;animation:flick 1.1s ease-in-out infinite}
+.fire i:nth-child(2n){background:var(--r);height:90px;animation-delay:-.4s}.fire i:nth-child(3){animation-delay:-.7s}
+#detail{margin:30px 0 8px}
+@keyframes pulse{50%{transform:scale(1.03) rotate(-1deg)}}
+@keyframes flick{50%{transform:scaleY(1.18) scaleX(.9)}}
+@media(max-width:820px){.launch .wrap{grid-template-columns:1fr}.lart{max-width:340px;margin:20px auto 0}.count div{min-width:68px}}
+</style>
+</head>
+<body>
+<!-- ============ MASCOT (inline vector, same character everywhere; swap for PNGs if you like — see notes) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<clipPath id="e1"><circle cx="148" cy="192" r="46"/></clipPath><clipPath id="e2"><circle cx="252" cy="192" r="46"/></clipPath>
+<g id="base" stroke="#0a0a0a" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+<g fill="none" stroke="#F5E8D5" stroke-width="9" opacity=".6"><path d="M170 56q-16-14 0-26q16-12 0-24"/><path d="M232 52q18-12 2-24q-14-12 2-22"/><path d="M200 48q-10-8 0-14"/></g>
+<path d="M10 440L28 325Q50 285 140 272L260 272Q350 285 372 325L390 440Z" fill="#44403c"/><path d="M140 272L200 362L158 270Z" fill="#37332f"/><path d="M260 272L200 362L242 270Z" fill="#37332f"/><path d="M158 270L242 270L200 352Z" fill="#F5E8D5"/>
+<g transform="rotate(12 200 300)"><path d="M186 282L216 282L220 302L182 302Z" fill="#161616"/><path d="M184 302L218 302L232 372L200 394L170 372Z" fill="#161616"/><path d="M196 330H212" stroke="#FF3838" stroke-width="6"/><path d="M192 312L184 364" stroke="#F5E8D5" stroke-width="3" opacity=".5"/></g>
+<path d="M96 168L14 118L34 205L100 222Z" fill="#FF7138"/><path d="M304 168L386 118L366 205L300 222Z" fill="#FF7138"/><path d="M88 178L44 150L52 195L92 205Z" fill="#C94B1A" stroke="none"/><path d="M312 178L356 150L348 195L308 205Z" fill="#C94B1A" stroke="none"/>
+<ellipse cx="200" cy="192" rx="128" ry="112" fill="#FF7138"/>
+<path d="M92 152L84 98L124 122L138 68L172 112L204 58L230 112L270 72L282 124L318 98L308 152Q200 116 92 152Z" fill="#C4400F"/><g stroke="none" fill="#191919"><circle cx="138" cy="70" r="6"/><circle cx="204" cy="60" r="6"/><circle cx="270" cy="74" r="6"/></g>
+<g stroke="none"><ellipse cx="88" cy="252" rx="30" ry="22" fill="#2b1208" opacity=".8"/><ellipse cx="312" cy="252" rx="30" ry="22" fill="#2b1208" opacity=".8"/><ellipse cx="148" cy="238" rx="52" ry="18" fill="#8a2f12"/><ellipse cx="252" cy="238" rx="52" ry="18" fill="#8a2f12"/></g>
+<g stroke="none"><circle cx="148" cy="192" r="46" fill="#F5E8D5"/><circle cx="252" cy="192" r="46" fill="#F5E8D5"/></g>
+<path d="M106 192L128 196M114 162L134 182M110 224L132 212M150 240V222M194 192L174 196M290 192L270 196M286 162L266 182M290 224L268 212M250 240V222M206 192L226 196" stroke="#FF3838" stroke-width="3.5" fill="none"/>
+<path d="M192 232Q200 246 210 232" fill="none" stroke-width="6"/></g>
+<g id="ring" fill="none" stroke="#0a0a0a" stroke-width="7"><circle cx="148" cy="192" r="46"/><circle cx="252" cy="192" r="46"/></g>
+<g id="phone" stroke="#0a0a0a" stroke-width="8" stroke-linejoin="round"><g transform="rotate(-8 322 345)"><rect x="268" y="284" width="108" height="130" rx="12" fill="#0a0a0a"/><rect x="278" y="296" width="88" height="112" rx="4" fill="#191919" stroke="none"/><g stroke="none"><rect x="288" y="318" width="9" height="18" fill="#FF3838"/><rect x="302" y="326" width="9" height="24" fill="#FF3838"/><rect x="316" y="338" width="9" height="20" fill="#FF3838"/><rect x="330" y="348" width="9" height="26" fill="#FF3838"/><rect x="344" y="360" width="9" height="18" fill="#FF3838"/></g><path d="M286 316L350 376" stroke="#F5E8D5" stroke-width="3" stroke-dasharray="5 4" fill="none"/><ellipse cx="266" cy="372" rx="17" ry="13" fill="#FF7138"/><ellipse cx="378" cy="362" rx="16" ry="12" fill="#FF7138"/></g></g>
+<g id="tired"><use href="#base"/><g stroke="#0a0a0a" stroke-width="8" stroke-linecap="round"><circle cx="152" cy="210" r="11" fill="#0a0a0a" stroke="none"/><circle cx="248" cy="210" r="11" fill="#0a0a0a" stroke="none"/><g clip-path="url(#e1)"><rect x="90" y="120" width="120" height="56" fill="#FF7138" stroke="none"/><path d="M90 176H210" stroke-width="6"/></g><g clip-path="url(#e2)"><rect x="190" y="120" width="120" height="56" fill="#FF7138" stroke="none"/><path d="M190 176H310" stroke-width="6"/></g><path d="M148 288Q176 278 200 284T254 282" fill="none" stroke-width="9"/></g><use href="#ring"/><use href="#phone"/></g>
+<g id="hype"><use href="#base"/><g stroke="#0a0a0a" stroke-width="8" stroke-linejoin="round"><circle cx="148" cy="192" r="9" fill="#0a0a0a" stroke="none"/><circle cx="252" cy="192" r="9" fill="#0a0a0a" stroke="none"/><path d="M136 266Q200 346 264 266Z" fill="#3a0d0d"/><path d="M150 270Q200 292 250 270L246 284Q200 306 154 284Z" fill="#F5E8D5" stroke-width="5"/><path d="M168 312Q200 326 232 312Q200 298 168 312Z" fill="#FF3838" stroke="none"/></g><use href="#ring"/></g>
+<g id="cry"><use href="#base"/><g stroke="#0a0a0a" stroke-width="8" stroke-linecap="round" fill="none"><path d="M124 238Q100 290 116 350M172 244Q166 300 150 346M228 244Q234 300 250 346M276 238Q300 290 284 350" stroke-width="22"/><path d="M124 238Q100 290 116 350M172 244Q166 300 150 346M228 244Q234 300 250 346M276 238Q300 290 284 350" stroke="#F5E8D5" stroke-width="10"/><circle cx="150" cy="176" r="12" fill="#0a0a0a" stroke="none"/><circle cx="250" cy="176" r="12" fill="#0a0a0a" stroke="none"/><g clip-path="url(#e1)"><rect x="90" y="120" width="120" height="50" fill="#FF7138" stroke="none"/><path d="M90 170H210" stroke-width="6"/></g><g clip-path="url(#e2)"><rect x="190" y="120" width="120" height="50" fill="#FF7138" stroke="none"/><path d="M190 170H310" stroke-width="6"/></g><path d="M146 306Q176 268 200 292Q224 268 254 306Q200 286 146 306Z" fill="#3a0d0d" stroke-linejoin="round"/></g><use href="#ring"/></g>
+<g id="hat" stroke="#0a0a0a" stroke-width="8" stroke-linejoin="round"><path d="M118 100Q70 80 96 34Q122-12 160 14Q200-30 244 14Q290-14 308 36Q332 80 284 100Z" fill="#F5E8D5"/><rect x="112" y="92" width="176" height="40" rx="8" fill="#F5E8D5"/></g>
+<g id="chef"><use href="#hype"/><use href="#hat"/></g>
+</defs></svg>
+
+<nav aria-label="Main">
+<div class="wrap">
+<a class="logo" href="#top" aria-label="COOKED home">COOKED</a>
+<button class="burger" id="burger" aria-expanded="false" aria-controls="links" aria-label="Menu">☰</button>
+<div class="links" id="links">
+<a href="#lore">The Lore</a><a href="#memes">Memes</a><a href="#kitchen">The Community</a>
+<a class="btn sm" data-buy hidden data-link="tokenUrl" href="#coin">BUY $COOKED</a><a class="btn sm" data-pre href="#coin">LAUNCH OCT 15</a>
+<a class="ico" data-link="xUrl" href="#coin" aria-label="COOKED on X (opens in a new tab)"><svg class="xi" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.2 8.2L23 22h-6.6l-5.2-6.8L5.2 22H2l7.7-8.8L1.5 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.4 3.9H5.5L17.7 20Z"/></svg></a>
+<a class="ico" data-link="discordUrl" href="#coin" aria-label="COOKED Discord (opens in a new tab)"><svg class="xi" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18.3 18.3 0 0 0-5.4 0L9.6 3a19.8 19.8 0 0 0-4.9 1.4C1.600 9 .8 13.500 1.200 18a20 20 0 0 0 6 3l1.300-2.100c-.7-.3-1.400-.6-2-1l.5-.4a14.200 14.200 0 0 0 12 0l.5.4c-.6.4-1.300.7-2 1l1.300 2.100a20 20 0 0 0 6-3c.5-5.200-.8-9.700-3.500-13.600ZM8.500 15.300c-1.200 0-2.100-1.100-2.100-2.400s.9-2.400 2.100-2.400 2.100 1.100 2.100 2.400-.9 2.400-2.100 2.400Zm7 0c-1.200 0-2.100-1.100-2.100-2.400s.9-2.400 2.100-2.400 2.100 1.100 2.100 2.400-.9 2.400-2.100 2.400Z"/></svg></a>
+</div></div></nav>
+
+<main id="top">
+<header class="hero">
+<div class="wrap">
+<svg class="chartbg" viewBox="0 0 800 500" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60L120 110L200 90L300 200L380 170L500 300L580 280L700 420L800 460" fill="none" stroke="#FF3838" stroke-width="5"/></svg>
+<div>
+<h1>Too <span class="o">cooked</span><br>to quit.</h1>
+<p class="sub">Born in the trenches. Raised by red candles. Emotionally unavailable since the last dip.</p>
+<p class="tag">No thoughts. Just charts.</p>
+<div class="cta"><a class="btn" data-buy hidden data-link="tokenUrl" href="#coin">GET $COOKED</a><a class="btn" data-pre href="#coin">LAUNCHING OCT 15</a><a class="btn alt" href="#memes">ENTER THE KITCHEN</a><a class="ico big" data-link="xUrl" href="#coin" aria-label="COOKED on X (opens in a new tab)"><svg class="xi" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.2 8.2L23 22h-6.6l-5.2-6.8L5.2 22H2l7.7-8.8L1.5 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.4 3.9H5.5L17.7 20Z"/></svg></a><a class="ico big" data-link="discordUrl" href="#coin" aria-label="COOKED Discord (opens in a new tab)"><svg class="xi" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18.3 18.3 0 0 0-5.4 0L9.6 3a19.8 19.8 0 0 0-4.9 1.4C1.600 9 .8 13.500 1.200 18a20 20 0 0 0 6 3l1.300-2.100c-.7-.3-1.400-.6-2-1l.5-.4a14.200 14.200 0 0 0 12 0l.5.4c-.6.4-1.300.7-2 1l1.300 2.100a20 20 0 0 0 6-3c.5-5.200-.8-9.700-3.500-13.600ZM8.500 15.300c-1.200 0-2.100-1.100-2.100-2.400s.9-2.400 2.100-2.400 2.100 1.100 2.100 2.400-.9 2.400-2.100 2.400Zm7 0c-1.200 0-2.100-1.100-2.100-2.400s.9-2.400 2.100-2.400 2.100 1.100 2.100 2.400-.9 2.400-2.100 2.400Z"/></svg></a></div>
+</div>
+<div class="heroart">
+<div class="blob"></div>
+<i class="cd" style="height:46px;left:-4%;top:10%"></i><i class="cd" style="height:70px;left:6%;top:48%;animation-delay:-2s"></i><i class="cd" style="height:34px;right:0;top:6%;animation-delay:-1s"></i>
+<span class="sticker" style="right:2%;bottom:18%;transform:rotate(7deg)">wen sleep?</span>
+<span class="sticker" style="left:0;bottom:6%;transform:rotate(-6deg)">-84%</span>
+<svg class="mas" viewBox="-10 -20 420 470" role="img" aria-label="COOKED mascot: an exhausted orange goblin trader holding a phone with a crashing chart"><use href="#tired"/></svg>
+</div></div>
+</header>
+
+<section class="lore" id="lore"><div class="wrap">
+<svg class="mas" viewBox="-10 -20 420 470" role="img" aria-label="COOKED mascot, crying"><use href="#cry"/></svg>
+<div>
+<h2>It's not a phase.<br><span class="o">It's a lifestyle.</span></h2>
+<p style="margin-top:22px">Some coins have a roadmap. Some have a whitepaper. We have a guy who hasn't slept since Tuesday.</p>
+<p>Meet COOKED. No exit strategy. No sleep schedule. And absolutely no idea what's going on.</p>
+<div class="stages" aria-label="The three stages of a trader">
+<div class="stage"><small>stage 1</small>I'm early.</div>
+<div class="stage"><small>stage 2</small>It's just a pullback.</div>
+<div class="stage fin"><small>stage 3</small>I'm cooked.</div>
+</div></div></div></section>
+
+<section class="memes" id="memes"><div class="wrap">
+<h2>The <span class="o">meme</span> kitchen</h2>
+<p class="lead">Fresh out of the oven. Copy a caption, steal the vibe, post it somewhere you shouldn't.</p>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section class="back" id="back"><div class="wrap">
+<div>
+<h2>It's so over.<br>We're so back.</h2>
+<div class="lines"><p>Down bad yesterday. Unreasonably bullish today.</p><p>Never underestimate a cooked trader with absolutely nothing left to lose.</p></div>
+<div class="gchart"><svg viewBox="0 0 400 160" role="img" aria-label="Decorative green chart"><g stroke="#0a0a0a" stroke-width="3"><path d="M30 120V150M80 100V140M130 90V120M180 60V110M230 50V90M280 30V70M330 10V50" stroke="#65D98A"/><g fill="#65D98A"><rect x="22" y="128" width="16" height="16"/><rect x="72" y="108" width="16" height="22"/><rect x="122" y="96" width="16" height="18"/><rect x="172" y="70" width="16" height="30"/><rect x="222" y="58" width="16" height="26"/><rect x="272" y="38" width="16" height="26"/><rect x="322" y="18" width="16" height="26"/></g></g><path d="M20 140L130 108L230 70L350 14" fill="none" stroke="#F5E8D5" stroke-width="3" stroke-dasharray="6 5"/></svg></div>
+<p class="dis">Decorative. Not real data. This is a joke character, not a promise of anything.</p>
+</div>
+<svg class="mas" viewBox="-10 -20 420 470" role="img" aria-label="COOKED mascot celebrating"><use href="#hype"/></svg>
+</div></section>
+
+<section id="kitchen"><div class="wrap kit">
+<div>
+<h2>Welcome to<br><span class="o">the kitchen.</span></h2>
+<p style="max-width:50ch;margin-top:20px">The market is red. The traders are stressed. The kitchen is on fire. You already know what time it is.</p>
+<div class="poll" id="poll"><h3>What kind of cooked are you?</h3><div id="opts"></div><small>Results are local to this browser session. Not a global vote.</small></div>
+<p style="margin-top:30px"><a class="btn" data-link="discordUrl" href="#coin">JOIN THE DISCORD</a></p>
+</div>
+<svg class="mas" viewBox="-10 -20 420 470" role="img" aria-label="COOKED mascot"><use href="#tired"/></svg>
+</div></section>
+
+<section class="coin launch" id="coin"><div class="wrap">
+<svg class="chartbg" viewBox="0 0 800 500" preserveAspectRatio="none" aria-hidden="true"><path d="M0 420L120 380L220 400L320 300L420 330L520 200L620 230L720 90L800 40" fill="none" stroke="#65D98A" stroke-width="5"/></svg>
+<div class="lcopy">
+<span class="sticker pill">COOKED ($COOKED)</span>
+<h2 class="big">Launching<br><span class="o">October 15th</span></h2>
+<p class="lsub">The kitchen is getting ready. Official launch details will be announced soon.</p>
+<div class="count" id="count" role="timer" aria-label="Countdown to launch"><div><b id="cd-d">--</b><small>days</small></div><div><b id="cd-h">--</b><small>hrs</small></div><div><b id="cd-m">--</b><small>min</small></div><div><b id="cd-s">--</b><small>sec</small></div></div>
+<p class="soon" id="soon">LAUNCH DETAILS COMING SOON</p>
+<div class="cta">
+<a class="btn" data-link="xUrl" href="#coin">FOLLOW ON X FOR UPDATES</a>
+<a class="btn alt" data-link="discordUrl" href="#coin">JOIN THE DISCORD</a>
+</div>
+<div id="detail" hidden>
+<dl><dt>Name</dt><dd>COOKED</dd><dt>Ticker</dt><dd>$COOKED</dd><dt>Blockchain</dt><dd id="chain"></dd><dt>Contract</dt><dd id="ca"></dd></dl>
+<div class="row"><button class="btn" id="copyca" type="button">COPY CONTRACT ADDRESS</button><a class="btn" data-buy hidden data-link="tokenUrl" href="#coin">BUY $COOKED</a><a class="btn alt" data-buy hidden data-link="tokenUrl" href="#coin">PUMP.FUN</a></div>
+</div>
+</div>
+<div class="lart"><span class="sticker" style="right:4%;top:4%;transform:rotate(6deg)">oct 15</span>
+<svg class="mas" viewBox="-10 -40 420 490" role="img" aria-label="COOKED mascot wearing a chef hat and grinning"><use href="#chef"/></svg>
+<div class="fire" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
+<p class="disc">COOKED is a meme-coin community project and a joke. Crypto is risky and you can lose everything you put in. This website does not promise returns, give financial advice or show live market data. Only trust contract addresses and links posted on the official X and Discord.</p>
+</div></section>
+</main>
+
+<footer>
+<svg class="mas" viewBox="-10 -20 420 470" role="img" aria-label="COOKED mascot"><use href="#cry"/></svg>
+<h2>Too cooked to quit.</h2>
+<p>See you in the trenches.</p>
+<div class="flinks"><a class="btn sm alt flink" data-link="xUrl" href="#coin" aria-label="COOKED on X (opens in a new tab)"><svg class="xi" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.2 8.2L23 22h-6.6l-5.2-6.8L5.2 22H2l7.7-8.8L1.5 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.4 3.9H5.5L17.7 20Z"/></svg> X / Twitter</a><a class="btn sm alt flink" data-link="discordUrl" href="#coin" aria-label="COOKED Discord (opens in a new tab)"><svg class="xi" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18.3 18.3 0 0 0-5.4 0L9.6 3a19.8 19.8 0 0 0-4.9 1.4C1.600 9 .8 13.500 1.200 18a20 20 0 0 0 6 3l1.300-2.100c-.7-.3-1.400-.6-2-1l.5-.4a14.200 14.200 0 0 0 12 0l.5.4c-.6.4-1.300.7-2 1l1.300 2.100a20 20 0 0 0 6-3c.5-5.200-.8-9.700-3.500-13.600ZM8.500 15.300c-1.200 0-2.100-1.100-2.100-2.400s.9-2.400 2.100-2.400 2.100 1.100 2.100 2.400-.9 2.400-2.100 2.400Zm7 0c-1.200 0-2.100-1.100-2.100-2.400s.9-2.400 2.100-2.400 2.100 1.100 2.100 2.400-.9 2.400-2.100 2.400Z"/></svg> Discord</a><a class="btn sm" data-buy hidden data-link="tokenUrl" href="#coin">PUMP.FUN</a></div>
+<small style="opacity:.6">Born to buy. Forced to hold. · Meme coin, not financial advice.</small>
+</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =====================================================================
+   CONFIG — the ONLY place to edit for launch day. Leave '' / false until verified.
+   Launch day: set launched:true, paste contract, chain and tokenUrl (official
+   Pump.fun coin URL). Buy buttons only appear when launched is true AND tokenUrl is a valid https URL.
+   ===================================================================== */
+const CONFIG = {
+  launched:     false,                  // flip to true on launch day
+  launchDate:   '2026-10-15T00:00:00',  // local time of the visitor
+  contract:     '',                     // official contract address
+  chain:        '',                     // e.g. 'Solana' — only once confirmed
+  tokenUrl:     '',                     // official Pump.fun coin URL (https://...)
+  xUrl:         'https://x.com/CookedOnCoins',
+  discordUrl:   'https://discord.gg/2TTSkRRG5j'
+};
+/* ===================================================================== */
+const $=(s,r=document)=>r.querySelector(s);
+const toastEl=$('#toast');let tt;
+function toast(m){toastEl.textContent=m;toastEl.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>toastEl.classList.remove('on'),2200)}
+function ok(u){try{return /^https:\/\//.test(u)&&!!new URL(u)}catch(e){return false}}
+const live=CONFIG.launched===true&&ok(CONFIG.tokenUrl);
+document.querySelectorAll('[data-buy]').forEach(e=>e.hidden=!live);
+document.querySelectorAll('[data-pre]').forEach(e=>e.hidden=live);
+document.querySelectorAll('[data-link]').forEach(a=>{
+  const u=CONFIG[a.dataset.link];
+  if(ok(u)){a.href=u;a.target='_blank';a.rel='noopener noreferrer'}
+  else a.addEventListener('click',()=>toast('Link not available yet.'));
+});
+/* launch details: hidden until launched */
+$('#detail').hidden=!CONFIG.launched;$('#soon').hidden=!!CONFIG.launched;
+if(CONFIG.launched){
+  $('#chain').innerHTML=CONFIG.chain?'':'<span class="ph">not set</span>';if(CONFIG.chain)$('#chain').textContent=CONFIG.chain;
+  $('#ca').innerHTML=CONFIG.contract?'':'<span class="ph">contract not set</span>';if(CONFIG.contract)$('#ca').textContent=CONFIG.contract;
+}
+async function copy(t){try{await navigator.clipboard.writeText(t);return true}catch(e){const x=document.createElement('textarea');x.value=t;x.style.position='fixed';x.style.opacity='0';document.body.appendChild(x);x.select();let r=false;try{r=document.execCommand('copy')}catch(_){}x.remove();return r}}
+$('#copyca').addEventListener('click',async()=>{
+  if(!CONFIG.contract)return toast('No contract address configured yet.');
+  toast(await copy(CONFIG.contract)?'Contract address copied.':'Copy failed — select it manually.');
+});
+/* countdown (date text above stays visible even if this fails) */
+(function(){const t=new Date(CONFIG.launchDate).getTime();if(isNaN(t))return $('#count').hidden=true;
+ const f=n=>String(n).padStart(2,'0');
+ function tick(){const d=t-Date.now();
+  if(d<=0){$('#count').innerHTML='<p class="lsub" style="margin:0">Launch day. Watch X and Discord for official details.</p>';return clearInterval(iv)}
+  $('#cd-d').textContent=f(Math.floor(d/864e5));$('#cd-h').textContent=f(Math.floor(d/36e5)%24);$('#cd-m').textContent=f(Math.floor(d/6e4)%60);$('#cd-s').textContent=f(Math.floor(d/1e3)%60)}
+ const iv=setInterval(tick,1000);tick()})();
+/* mobile menu */
+const bg=$('#burger'),ln=$('#links');
+bg.addEventListener('click',()=>{const o=ln.classList.toggle('open');bg.setAttribute('aria-expanded',o)});
+ln.addEventListener('click',e=>{if(e.target.closest('a')){ln.classList.remove('open');bg.setAttribute('aria-expanded',false)}});
+/* memes */
+const MEMES=[
+ ['the dip','bro said he was buying the dip\nit\'s the 17th dip\nhe\'s still buying\nhe\'s cooked 🔥','tired','cr'],
+ ['the portfolio','portfolio: -84%\nsleep schedule: destroyed\nmental health: buffering\nconviction: somehow still bullish','cry','ch'],
+ ['the comeback','made back $4 after losing $900\nTHE COMEBACK IS REAL\nwe are so back 🔥','hype','or'],
+ ['the strategy','my trading strategy:\n1. buy\n2. panic\n3. hold\n4. rename the investment \u2018long term\u2019\n5. repeat 💀','tired','ch'],
+ ['the late-night trader','it\'s 4 AM\nyour eyes are red\nyour portfolio is red\neven your energy drink is empty\nyou\'re cooked 🔥','cry','or'],
+ ['the generational entry','he has $12 left\nhe\'s down 94%\nhe just said \u2018generational entry\u2019\nwe love this idiot 🔥','hype','cr']
+];
+const grid=$('#grid');
+MEMES.forEach(([k,c,f,t])=>{
+ const d=document.createElement('article');d.className='card '+t;
+ d.innerHTML=`<span class="k"></span><svg class="mas art" viewBox="-10 -20 420 470" role="img" aria-label="COOKED mascot meme"><use href="#${f}"/></svg><blockquote></blockquote><button class="btn sm" type="button">Copy caption</button>`;
+ $('.k',d).textContent=k;$('blockquote',d).textContent=c;
+ $('button',d).addEventListener('click',async()=>toast(await copy(c)?'Caption copied.':'Copy failed.'));
+ grid.appendChild(d);
+});
+/* poll (local only) */
+const OPT=['The early buyer','The exit liquidity','The guy buying after a 900% candle','The permanently cooked legend'];
+const votes=OPT.map(()=>0);let mine=-1;const box=$('#opts');
+OPT.forEach((o,i)=>{
+ const b=document.createElement('button');b.type='button';b.className='opt';b.setAttribute('aria-pressed','false');
+ b.innerHTML='<i class="bar"></i><span><b></b><em></em></span>';$('b',b).textContent=o;
+ b.addEventListener('click',()=>{if(mine>-1)votes[mine]--;mine=mine===i?-1:i;if(mine>-1)votes[mine]++;draw()});
+ box.appendChild(b);
+});
+function draw(){const tot=votes.reduce((a,b)=>a+b,0);[...box.children].forEach((b,i)=>{
+ b.setAttribute('aria-pressed',i===mine);const p=tot?Math.round(votes[i]/tot*100):0;
+ $('.bar',b).style.width=(tot?p:0)+'%';$('em',b).textContent=tot?p+'%':''})}
+</script>
+</body>
+</html>
